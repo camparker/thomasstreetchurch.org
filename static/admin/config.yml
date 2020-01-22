@@ -2,23 +2,18 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: static/img
-public_folder: /img
+media_folder: static/images/uploads
+public_folder: /images/uploads
 
 collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/pages/index.md"
+      - file: "src/markdown/index.md"
         label: "HomePage"
         name: "index"
         fields:
-          - {
-              label: "Slug",
-              name: "slug",
-              widget: "hidden",
-              default: "index-page",
-            }
+          - { label: "Slug", name: "slug", widget: "hidden", default: "index-page" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
           - { label: "Publish Date", name: "date", widget: "datetime" }

@@ -1,7 +1,7 @@
 {
   "name": "thomas-street-church",
   "private": true,
-  "description": "Thomas Street Church Website",
+  "description": "Thomas Street Church website",
   "version": "0.1.0",
   "author": "Cameron Parker",
   "dependencies": {
