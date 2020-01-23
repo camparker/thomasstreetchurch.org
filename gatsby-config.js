@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Thomas Street Church`,
-    description: `Thomas Street Church of Christ Website`,
+    title: `Thomas Street Church of Christ`,
+    description: `Thomas Street Church of Christ website`,
     author: `@camparker`,
   },
   plugins: [
