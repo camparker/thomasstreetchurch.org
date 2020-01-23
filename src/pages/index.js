@@ -1,16 +1,16 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <h1>{data.markdownRemark.frontmatter.title}</h1>
+    <p>{data.markdownRemark.frontmatter.subtitle}</p>
+    <p>{data.markdownRemark.frontmatter.date}</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
@@ -19,3 +19,18 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  {
+    markdownRemark(frontmatter: { slug: { eq: "index-page" } }) {
+      frontmatter {
+        title
+        slug
+        subtitle
+        date
+        description
+      }
+      html
+    }
+  }
+`
