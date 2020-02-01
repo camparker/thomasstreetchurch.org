@@ -7,4 +7,4 @@ Frameworks/Libraries:
 - Gatsby
 - graphQL
 - Netlify CMS
-- Material-UI
+- Styled-Components
