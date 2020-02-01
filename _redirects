@@ -1,3 +1,6 @@
+# Redirect domain aliases to primary domain
 https://www.thomasstreetchurch.com/* https://thomasstreetchurch.org/:splat 301!
+https://thomasstreetchurch.com/* https://thomasstreetchurch.org/:splat 301!
 
+# Redirect default Netlify subdomain to primary domain
 https://thomasstreetchurch.netlify.com/* https://thomasstreetchurch.org/:splat 301!
