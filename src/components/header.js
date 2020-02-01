@@ -1,42 +1,24 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import Theme from "./theme"
+import styled from "styled-components"
+import { Link } from "gatsby"
+import TSCLogo from "./tsc-logo"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const Container = styled.div`
+  width: 100%;
+  background-color: ${props => props.theme.colors.lightPurple};
+`
+
+const Header = () => (
+  <Theme>
+    <Container>
+      <header>
+        <div>
+          <h1>Testing Header</h1>
+        </div>
+      </header>
+    </Container>
+  </Theme>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
