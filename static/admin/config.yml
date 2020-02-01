@@ -10,7 +10,7 @@ backend:
 
 media_folder: static/images/uploads
 public_folder: /images/uploads
-logo_url: /src/images/tsc-logo.png
+logo_url: static/images/tsc-logo.png
 
 
 collections:
