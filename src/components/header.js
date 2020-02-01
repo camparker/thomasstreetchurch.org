@@ -6,15 +6,26 @@ import TSCLogo from "./tsc-logo"
 
 const Container = styled.div`
   width: 100%;
-  background-color: ${props => props.theme.colors.lightPurple};
+  height: 200px;
+  background-color: ${props => props.theme.colors.midPurple};
+  color: white;
+`
+const NavbarLogo = styled.div`
+  width: 125px;
 `
 
-const Header = () => (
+const Header = ({ data }) => (
   <Theme>
     <Container>
       <header>
+        <Link to="/">
+          <NavbarLogo>
+            <TSCLogo />
+          </NavbarLogo>
+        </Link>
+
         <div>
-          <h1>Testing Header</h1>
+          <h1>Thomas Street Church Of Christ</h1>
         </div>
       </header>
     </Container>
