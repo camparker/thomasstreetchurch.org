@@ -4,31 +4,71 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import TSCLogo from "./tsc-logo"
 
+const MainHeader = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+`
 const Container = styled.div`
   width: 100%;
-  height: 200px;
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
   background-color: ${props => props.theme.colors.midPurple};
-  color: white;
 `
-const NavbarLogo = styled.div`
+const NavLogo = styled.div`
   width: 125px;
+
+  @media (min-width: 768px) {
+    margin-right: auto;
+  }
 `
-
-const Header = ({ data }) => (
+const Nav = styled.nav`
+  margin: 1em 0 0.5em;
+  text-align: center;
+  display: inline;
+  display: inline-block;
+  padding: 0.5em 1.5em;
+`
+const Ul = styled.ul`
+  margin: 1em 0 0.5em;
+  text-align: center;
+`
+const Li = styled.li`
+  display: inline;
+`
+const StyledLink = styled(Link)`
+  display: inline-block;
+  padding: 0.5em 1.5em;
+`
+const Header = () => (
   <Theme>
-    <Container>
-      <header>
-        <Link to="/">
-          <NavbarLogo>
+    <MainHeader>
+      <Container>
+        <NavLogo>
+          <Link to="/">
             <TSCLogo />
-          </NavbarLogo>
-        </Link>
-
-        <div>
-          <h1>Thomas Street Church Of Christ</h1>
-        </div>
-      </header>
-    </Container>
+          </Link>
+        </NavLogo>
+        <Nav>
+          <Ul>
+            <Li>
+              <StyledLink to="#">News</StyledLink>
+            </Li>
+            <Li>
+              <StyledLink to="#">Prayer Requests</StyledLink>
+            </Li>
+            <Li>
+              <StyledLink to="#">Our Mission</StyledLink>
+            </Li>
+          </Ul>
+        </Nav>
+      </Container>
+    </MainHeader>
   </Theme>
 )
 

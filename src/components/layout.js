@@ -4,14 +4,14 @@ import styled from "styled-components"
 import Header from "./header"
 import Footer from "./footer"
 import "normalize.css"
-import "./layout.css"
 
+// Flexbox - for sticky footer
 const Site = styled.div`
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 `
-
+// Flexbox - for sticky footer
 const SiteContent = styled.main`
   flex: 1;
 `

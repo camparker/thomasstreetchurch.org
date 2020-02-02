@@ -1,5 +1,3 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import Theme from "./theme"
 import styled from "styled-components"
@@ -11,7 +9,7 @@ const StyledFooter = styled.footer`
 const Footer = () => (
   <Theme>
     <StyledFooter>
-      <h1>Testing Footer</h1>
+      <h1>Thomas Street Church Of Christ</h1>
     </StyledFooter>
   </Theme>
 )
