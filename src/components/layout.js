@@ -7,6 +7,7 @@ import "normalize.css"
 
 // Flexbox - for sticky footer
 const Site = styled.div`
+  font-family: "baskerville-bold", "baskerville-italic", serif;
   display: flex;
   min-height: 100vh;
   flex-direction: column;

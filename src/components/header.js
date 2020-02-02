@@ -9,10 +9,11 @@ const MainHeader = styled.header`
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+  border-bottom: 4px solid ${props => props.theme.colors.lightYellow};
 `
 const Container = styled.div`
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -43,7 +44,17 @@ const Li = styled.li`
 `
 const StyledLink = styled(Link)`
   display: inline-block;
+  margin: 0.5em;
   padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-bottom: 2px solid ${props => props.theme.colors.lightYellow};
+  color: ${props => props.theme.colors.eggshellWhite};
+  font-size: ${props => props.theme.fontSizes.small};
+
+  &:hover {
+    background-color: ${props => props.theme.colors.eggshellWhite};
+    color: ${props => props.theme.colors.midPurple};
+  }
 `
 const Header = () => (
   <Theme>
@@ -57,13 +68,13 @@ const Header = () => (
         <Nav>
           <Ul>
             <Li>
-              <StyledLink to="#">News</StyledLink>
+              <StyledLink to="/news">News</StyledLink>
             </Li>
             <Li>
-              <StyledLink to="#">Prayer Requests</StyledLink>
+              <StyledLink to="/prayer">Prayer Requests</StyledLink>
             </Li>
             <Li>
-              <StyledLink to="#">Our Mission</StyledLink>
+              <StyledLink to="/mission">Our Mission</StyledLink>
             </Li>
           </Ul>
         </Nav>
