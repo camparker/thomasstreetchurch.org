@@ -10,16 +10,9 @@ const Jumbotron = styled.div`
   position: relative;
   text-align: center;
   color: ${props => props.theme.colors.eggshellWhite};
-  @media (min-width: 768px) {
-  }
 `
 
-const JumbotronImage = styled.div`
-  width: 100%;
-
-  @media (min-width: 768px) {
-  }
-`
+const JumbotronImage = styled.div``
 
 const JumbotronText = styled.div`
   position: absolute;
