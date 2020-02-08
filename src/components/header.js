@@ -29,13 +29,12 @@ const NavLogo = styled.div`
   }
 `
 const Nav = styled.nav`
-  margin: 1em 0 0.5em;
   text-align: center;
-  display: inline;
   display: inline-block;
   padding: 0.5em 1.5em;
 `
 const Ul = styled.ul`
+  padding: 0;
   margin: 1em 0 0.5em;
   text-align: center;
 `
