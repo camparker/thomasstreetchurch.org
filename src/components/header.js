@@ -22,7 +22,7 @@ const Container = styled.div`
   background-color: ${props => props.theme.colors.midPurple};
 `
 const NavLogo = styled.div`
-  width: 125px;
+  width: 150px;
 
   @media (min-width: 768px) {
     margin-right: auto;
@@ -41,6 +41,10 @@ const Ul = styled.ul`
 `
 const Li = styled.li`
   display: inline;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `
 const StyledLink = styled(Link)`
   display: inline-block;
