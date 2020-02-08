@@ -21,13 +21,21 @@ const StyledLink = styled(Link)`
   }
 `
 
+const HiddenLink = styled.a`
+  color: ${props => props.theme.colors.midPurple};
+
+  &:hover {
+    color: ${props => props.theme.colors.eggshellWhite};
+  }
+`
+
 const Footer = () => (
   <Theme>
     <StyledFooter>
       <p>
         Copyright {new Date().getFullYear()} |{" "}
         <StyledLink to="/">Thomas Street Church of Christ</StyledLink> |{" "}
-        <StyledLink to="/admin">Admin</StyledLink>
+        <HiddenLink href="/admin/">Admin</HiddenLink>
       </p>
     </StyledFooter>
   </Theme>
