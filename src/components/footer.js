@@ -7,6 +7,7 @@ const StyledFooter = styled.footer`
   width: 100%;
   text-align: center;
   font-size: 10px;
+  border-top: 2px solid ${props => props.theme.colors.lightYellow};
   background-color: ${props => props.theme.colors.midPurple};
   color: ${props => props.theme.colors.eggshellWhite};
 `
@@ -25,7 +26,8 @@ const Footer = () => (
     <StyledFooter>
       <p>
         Copyright {new Date().getFullYear()} |{" "}
-        <StyledLink to="/">Thomas Street Church of Christ</StyledLink>
+        <StyledLink to="/">Thomas Street Church of Christ</StyledLink> |{" "}
+        <StyledLink to="/admin">Admin</StyledLink>
       </p>
     </StyledFooter>
   </Theme>
